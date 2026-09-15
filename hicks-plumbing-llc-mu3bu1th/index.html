@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hicks Plumbing LLC | Professional Plumbing Services in Casper, WY</title>
+  <meta name="description" content="Expert plumbing services in Casper, Wyoming. 4.9★ rated. Emergency repairs, installations, and maintenance. Call (307) 258-9001 today.">
+  <meta property="og:title" content="Hicks Plumbing LLC | Casper, WY">
+  <meta property="og:description" content="Professional plumbing services with 4.9★ rating. Emergency repairs, installations, and maintenance in Casper, Wyoming.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:url" content="https://hicksplumbing.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1676210134188-4c05dd172f89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDY5Mjg2fDB8MXxzZWFyY2h8MXx8UGx1bWJlcnxlbnwxfDB8fHwxNzg5NTE2MzU2fDA&ixlib=rb-4.1.0&q=80&w=1080">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-primary: #1a472a;
+      --color-secondary: #d4a574;
+      --color-accent: #e74c3c;
+      --color-light: #f8f6f1;
+      --color-dark: #2c2c2c;
+      --color-border: #e0dbd4;
+      --color-success: #27ae60;
+      --font-serif: 'Crimson Text', serif;
+      --font-sans: 'Inter', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.16);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-dark);
+      background-color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      box-shadow: var(--shadow-md);
+      padding: 0.75rem 0;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    header.scrolled .header-container {
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-family: var(--font-serif);
+      letter-spacing: -0.5px;
+    }
+
+    .logo svg {
+      width: 40px;
+      height: 40px;
+      transition: var(--transition);
+    }
+
+    .logo:hover svg {
+      transform: rotate(-5deg) scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-dark);
+      font-size: 0.95rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-secondary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--color-primary);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cta-button:hover {
+      background: var(--color-secondary);
+      color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary);
+      padding: 0.65rem 1.4rem;
+    }
+
+    .cta-button.secondary:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .logo {
+        font-size: 1.25rem;
+      }
+
+      .header-container {
+        padding: 1rem 1rem;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0d2817 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://images.unsplash.com/photo-1676210134188-4c05dd172f89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDY5Mjg2fDB8MXxzZWFyY2h8MXx8UGx1bWJlcnxlbnwxfDB8fHwxNzg5NTE2MzU2fDA&ixlib=rb-4.1.0&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(26, 71, 42, 0.7) 0%, rgba(26, 71, 42, 0.85) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: #fff;
+      max-width: 700px;
+      padding: 2rem;
+      animation: heroFadeIn 0.8s ease-out forwards;
+    }
+
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta .cta-button {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        min-height: 500px;
+        padding: 3rem 0;
+      }
+
+      .hero-content {
+        padding: 1.5rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-cta .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    /* Services Section */
+    .services {
+      padding: 5rem 1.5rem;
+      background: #fff;
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 6vw, 3rem);
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--color-light);
+      padding: 2.5rem 2rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--color-secondary);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .service-card.reveal {
+      animation: cardReveal 0.6s ease-out forwards;
+    }
+
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-left-color: var(--color-accent);
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* Why Choose Us */
+    .why-choose {
+      padding: 5rem 1.5rem;
+      background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 1.5rem;
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .why-item.reveal {
+      animation: slideInLeft 0.6s ease-out forwards;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .why-icon {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background: var(--color-secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .why-content h3 {
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .why-content p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* Service Area Section */
+    .service-area {
+      padding: 5rem 1.5rem;
+      background: #fff;
+    }
+
+    .service-area-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .service-area-text h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .service-area-text p {
+      color: #666;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .service-area-text ul {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .service-area-text li {
+      padding: 0.75rem 0;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .service-area-text li::before {
+      content: '✓';
+      color: var(--color-success);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .map-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 400px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .service-area-content {
+        grid-template-columns: 1fr;
+      }
+
+      .map-container {
+        height: 300px;
+      }
+
+      .service-area-text h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Reviews & Social Proof */
+    .reviews {
+      padding: 5rem 1.5rem;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0d2817 100%);
+      color: #fff;
+    }
+
+    .reviews-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .reviews-header h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .rating-display {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .rating-stars {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .rating-text {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .reviews-count {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .review-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .review-card.reveal {
+      animation: cardReveal 0.6s ease-out forwards;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-secondary);
+    }
+
+    .review-stars {
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
+
+    .review-author {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 5rem 1.5rem;
+      background: #fff;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+      padding: 2rem 0;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .faq-item.reveal {
+      animation: cardReveal 0.6s ease-out forwards;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      color: var(--color-secondary);
+    }
+
+    .faq-question h3 {
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .faq-toggle {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--color-light);
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-toggle {
+      background: var(--color-secondary);
+      color: #fff;
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #666;
+      line-height: 1.8;
+      margin-top: 1.5rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 5rem 1.5rem;
+      background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      margin-bottom: 2rem;
+    }
+
+    .contact-item h3 {
+      font-size: 1rem;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+    }
+
+    .contact-item p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .contact-item a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .contact-item a:hover {
+      color: var(--color-accent);
+    }
+
+    .hours-list {
+      list-style: none;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      color: #666;
+    }
+
+    .hours-list .day {
+      font-weight: 500;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.875rem;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-secondary);
+      box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 1rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .form-submit:hover {
+      background: var(--color-secondary);
+      color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 3rem 1.5rem 1.5rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-section h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      line-height: 1.8;
+      transition: color 0.2s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--color-secondary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* Utilities */
+    .text-center {
+      text-align: center;
+    }
+
+    .opacity-reduced {
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .section-container {
+        padding: 0 1.5rem;
+      }
+    }
+  </style>
+
+  <script>
+    // Smooth scroll and sticky header
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('header');
+      const navLinks = document.querySelectorAll('nav a');
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      // Sticky header on scroll
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Smooth scroll for nav links
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+
+      // FAQ Accordion
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', function() {
+          // Close other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+          // Toggle current item
+          item.classList.toggle('active');
+        });
+      });
+
+      // Intersection Observer for scroll reveal animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all reveal elements
+      document.querySelectorAll('.service-card, .why-item, .faq-item, .review-card').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Animated counter for rating and reviews
+      const ratingElement = document.querySelector('.rating-text');
+      const reviewsCountElement = document.querySelector('.reviews-count');
+      
+      if (ratingElement) {
+        const reviewsSection = document.querySelector('.reviews');
+        const counterObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !ratingElement.dataset.counted) {
+              animateCounter(ratingElement, 4.9, 1);
+              animateCounter(reviewsCountElement, 37, 0);
+              ratingElement.dataset.counted = 'true';
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        if (reviewsSection) {
+          counterObserver.observe(reviewsSection);
+        }
+      }
+
+      function animateCounter(element, target, decimals) {
+        let current = 0;
+        const increment = target / 30;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = current.toFixed(decimals);
+        }, 30);
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="6" fill="currentColor" opacity="0.1"/>
+          <path d="M12 10v20M28 10v20M12 15h16M12 25h16M10 20h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Hicks
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#area">Service Area</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:(307) 258-9001" class="cta-button">(307) 258-9001</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Expert Plumbing Services for Casper</h1>
+      <p>Professional, reliable, and trustworthy plumbing solutions. From repairs to installations, we've got you covered.</p>
+      <div class="hero-cta">
+        <a href="tel:(307) 258-9001" class="cta-button">Call Now: (307) 258-9001</a>
+        <a href="#contact" class="cta-button secondary">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive plumbing solutions tailored to your needs, backed by years of expertise and dedication to quality.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Emergency Repairs</h3>
+          <p>24/7 emergency plumbing services for urgent issues. Burst pipes, leaks, and blockages—we respond quickly to minimize damage.</p>
+        </div>
+        <div class="service-card">
+          <h3>Water Heater Services</h3>
+          <p>Installation, maintenance, and repair of water heaters. Ensure consistent hot water and energy efficiency year-round.</p>
+        </div>
+        <div class="service-card">
+          <h3>Drain Cleaning</h3>
+          <p>Professional drain cleaning and unclogging services. We use advanced equipment to clear blockages safely and effectively.</p>
+        </div>
+        <div class="service-card">
+          <h3>Pipe Installation</h3>
+          <p>Expert installation of new plumbing systems for renovations and new construction. Quality materials and precise workmanship.</p>
+        </div>
+        <div class="service-card">
+          <h3>Fixture Replacement</h3>
+          <p>Upgrade or replace sinks, faucets, toilets, and showers. Modern fixtures that enhance functionality and aesthetics.</p>
+        </div>
+        <div class="service-card">
+          <h3>Preventive Maintenance</h3>
+          <p>Regular inspections and maintenance to prevent costly issues. Protect your plumbing system and extend its lifespan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose" id="why">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>Why Choose Hicks Plumbing</h2>
+        <p>Trusted by Casper residents for professional service, reliability, and exceptional results.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">✓</div>
+          <div class="why-content">
+            <h3>Licensed & Insured</h3>
+            <p>Fully certified professionals with comprehensive insurance coverage for your peace of mind.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">★</div>
+          <div class="why-content">
+            <h3>4.9★ Rated</h3>
+            <p>Consistently excellent service recognized by our satisfied customers and community.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">⚡</div>
+          <div class="why-content">
+            <h3>Fast Response</h3>
+            <p>Quick emergency response times to address your plumbing issues before they escalate.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">💰</div>
+          <div class="why-content">
+            <h3>Transparent Pricing</h3>
+            <p>Upfront quotes with no hidden fees. Know exactly what you're paying before we start work.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🔧</div>
+          <div class="why-content">
+            <h3>Expert Technicians</h3>
+            <p>Experienced professionals trained in the latest plumbing techniques and technologies.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🏆</div>
+          <div class="why-content">
+            <h3>Warranty Support</h3>
+            <p>Our work is backed by comprehensive warranties ensuring long-term satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Section -->
+  <section class="service-area" id="area">
+    <div class="section-container">
+      <div class="service-area-content">
+        <div class="service-area-text">
+          <h2>Serving Casper & Surrounding Areas</h2>
+          <p>We proudly serve the Casper community and surrounding regions with professional plumbing services. Whether you're in the heart of the city or the outskirts, we're ready to help.</p>
+          <ul>
+            <li>Residential plumbing</li>
+            <li>Commercial plumbing</li>
+            <li>New construction</li>
+            <li>Renovations & remodels</li>
+            <li>Emergency services</li>
+            <li>Maintenance contracts</li>
+          </ul>
+          <a href="tel:(307) 258-9001" class="cta-button">Schedule Service Today</a>
+        </div>
+        <div class="map-container">
+          <iframe loading="lazy" src="https://maps.google.com/maps?q=42.8093163,-106.3487201&z=14&output=embed" title="Hicks Plumbing Location in Casper, Wyoming"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews & Social Proof -->
+  <section class="reviews" id="reviews">
+    <div class="reviews-container">
+      <div class="reviews-header">
+        <h2>Trusted by Our Community</h2>
+        <div class="rating-display">
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-text">4.9</div>
+        </div>
+        <p class="reviews-count">Based on 37 verified reviews</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excellent service! The team was professional, punctual, and solved our plumbing issue quickly. Highly recommended."</p>
+          <p class="review-author">— Sarah M.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Hicks Plumbing provided exceptional service at a fair price. They explained everything clearly and did quality work."</p>
+          <p class="review-author">— James T.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"We've used Hicks Plumbing multiple times. They're reliable, trustworthy, and always deliver outstanding results."</p>
+          <p class="review-author">— Linda R.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our services and how we can help you.</p>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer emergency plumbing services?</h3>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we provide 24/7 emergency plumbing services for urgent issues like burst pipes, major leaks, and sewage backups. Contact us immediately at (307) 258-9001 for rapid response.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What areas do you service?</h3>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>We serve Casper, Wyoming and the surrounding areas. Our service area includes residential and commercial properties throughout the region. Call us to confirm service availability for your location.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How much do your services cost?</h3>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Pricing varies based on the type and complexity of the work required. We provide transparent, upfront quotes before starting any job. There are no hidden fees, and we're happy to discuss pricing options with you.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are your technicians licensed?</h3>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, all our technicians are fully licensed, insured, and trained professionals. We maintain current certifications and stay updated on the latest plumbing standards and technologies.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you provide warranties on your work?</h3>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. We stand behind our work with comprehensive warranties on labor and materials. We're confident in the quality of our service and want you to have complete peace of mind.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How can I schedule a service appointment?</h3>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>You can schedule an appointment by calling us at (307) 258-9001 or by filling out our contact form. We'll work with you to find a convenient time that fits your schedule.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <p><a href="tel:(307) 258-9001">(307) 258-9001</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Address</h3>
+            <p>4341 Sunrise Dr<br>Casper, WY 82604<br>USA</p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Hours</h3>
+            <ul class="hours-list">
+              <li><span class="day">Monday:</span> <span>9 AM–5 PM</span></li>
+              <li><span class="day">Tuesday:</span> <span>9 AM–5 PM</span></li>
+              <li><span class="day">Wednesday:</span> <span>9 AM–5 PM</span></li>
+              <li><span class="day">Thursday:</span> <span>9 AM–5 PM</span></li>
+              <li><span class="day">Friday:</span> <span>9 AM–5 PM</span></li>
+              <li><span class="day">Saturday:</span> <span>Closed</span></li>
+              <li><span class="day">Sunday:</span> <span>Closed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Hicks Plumbing</h3>
+          <p>Professional plumbing services serving Casper, Wyoming and surrounding areas with expertise, reliability, and integrity.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#services">Services</a><br>
+          <a href="#why">Why Choose Us</a><br>
+          <a href="#area">Service Area</a><br>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><a href="tel:(307) 258-9001">(307) 258-9001</a></p>
+          <p>4341 Sunrise Dr<br>Casper, WY 82604</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Hicks Plumbing LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
