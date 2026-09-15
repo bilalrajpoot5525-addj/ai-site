@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houston Roofing & Construction - Your Trusted Roofing Contractor</title>
+    <style>
+        /* Basic Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0;
+            color: #fff;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-left: 25px;
+        }
+
+        header nav a {
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        header nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        header nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #e9ecef;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: #3498db;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), #2c3e50; /* Dark overlay on a dark base */
+            color: #fff;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        #hero h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        #hero h2::after {
+            background-color: #fff;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #eee;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Section */
+        #services .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #services .service-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #services .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        #services .service-item h3 {
+            color: #2c3e50;
+            margin-top: 15px;
+        }
+
+        #services .service-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* About Section */
+        #about .container {
+            max-width: 900px;
+        }
+
+        #about p {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Reviews Section */
+        #reviews .review-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        #reviews .stars {
+            color: #f39c12; /* Gold color for stars */
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        #reviews .review-card p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .reviews-count {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* Contact Section */
+        #contact .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        #contact .contact-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+        }
+
+        #contact .contact-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        #contact .contact-item p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        #contact .contact-item a {
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        #contact .contact-item a:hover {
+            color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header nav {
+                display: none; /* Hidden by default */
+                width: 100%;
+                text-align: center;
+                order: 2; /* Puts nav below logo/toggle */
+                margin-top: 15px;
+            }
+
+            header nav.active {
+                display: block; /* Shown when active */
+            }
+
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            #hero {
+                padding: 80px 0;
+            }
+
+            #hero h2 {
+                font-size: 3rem;
+            }
+
+            #hero p {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            #services .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #contact .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #contact .contact-item {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero h2 {
+                font-size: 2.5rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#hero" class="logo">Houston Roofing & Construction</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Houston Roofing & Construction</h2>
+                <p>Your trusted roofing contractor in Houston, Texas.</p>
+                <a href="#contact" class="btn">Get a Free Estimate</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Roof Installation</h3>
+                        <p>Expert installation of new roofs with high-quality materials and craftsmanship.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Roof Repair</h3>
+                        <p>Prompt and reliable repair services for all types of roofing issues, big or small.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Roof Replacement</h3>
+                        <p>Complete roof replacement solutions designed for durability and enhanced curb appeal.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Storm Damage Repair</h3>
+                        <p>Specialized services for repairing roofs damaged by severe weather conditions.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Commercial Roofing</h3>
+                        <p>Professional roofing services tailored for commercial properties and businesses.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Residential Roofing</h3>
+                        <p>Comprehensive roofing solutions for homeowners, ensuring safety and comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Houston Roofing & Construction is a leading roofing contractor based in Houston, Texas, United State America. With years of experience, we are committed to providing professional, trustworthy, and modern roofing solutions for our community.</p>
+                <p>Our team specializes in a wide range of roofing services, ensuring durability, quality, and customer satisfaction on every project. We understand the unique challenges of roofing in the Houston area and provide solutions that stand the test of time and weather.</p>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>Rated <span class="rating">4.9</span> out of 5 based on <span class="reviews-count">335</span> reviews.</p>
+                    <p>We pride ourselves on delivering exceptional service and results that speak for themselves. Our clients' satisfaction is our top priority, and their positive feedback drives us to continuously improve.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+18322373737">(832) 237-3737</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>11330 West Rd, Houston, TX 77065</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Houston Roofing & Construction. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+
+                // Close menu when a link is clicked (for single-page navigation)
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('active');
+                    });
+                });
+            }
+
+            // Update current year in footer
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
