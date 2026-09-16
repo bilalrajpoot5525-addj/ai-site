@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AquaMan Mobile Mechanic Car Service – Professional Auto Repair in Houston, TX</title>
+  <meta name="description" content="AquaMan Mobile Mechanic Car Service brings professional auto repair directly to you in Houston, TX. Expert diagnostics, brake service, engine work, and car programming with 4.9★ rating from 493 reviews.">
+  <meta name="robots" content="index, follow">
+  <meta name="canonical" content="https://aquamanmobilemechanic.com">
+  <meta name="geo.region" content="US-TX">
+  <meta name="geo.placename" content="Houston, Texas">
+  <meta name="geo.position" content="29.727958599999997;-95.6510127">
+  <meta name="ICBM" content="29.727958599999997, -95.6510127">
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="AquaMan Mobile Mechanic Car Service – Houston Auto Repair">
+  <meta property="og:description" content="Professional mobile mechanic serving Houston, TX. On-site car repairs, diagnostics, and programming. 4.9★ rated.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDY5Mjg2fDB8MXxzZWFyY2h8MXx8TWVjaGFuaWN8ZW58MXwwfHx8MTc4OTU4ODU5OXww&ixlib=rb-4.1.0&q=80&w=1080">
+  <meta property="og:url" content="https://aquamanmobilemechanic.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AquaMan Mobile Mechanic Car Service – Houston Auto Repair">
+  <meta name="twitter:description" content="Professional mobile mechanic serving Houston, TX. On-site car repairs, diagnostics, and programming. 4.9★ rated.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDY5Mjg2fDB8MXxzZWFyY2h8MXx8TWVjaGFuaWN8ZW58MXwwfHx8MTc4OTU4ODU5OXww&ixlib=rb-4.1.0&q=80&w=1080">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f4c3a;
+      --primary-light: #1a6b52;
+      --accent: #e8743b;
+      --accent-light: #f5a066;
+      --neutral-dark: #1a1a1a;
+      --neutral-light: #f5f5f5;
+      --neutral-gray: #6b6b6b;
+      --border: #e0e0e0;
+      --success: #2d7a4a;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+      --shadow-lg: 0 16px 40px rgba(0,0,0,0.16);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--neutral-dark);
+      background-color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    a:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    button {
+      font-family: 'Inter', sans-serif;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* Scroll reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .reveal.active {
+      animation: revealIn 0.8s ease-out forwards;
+    }
+
+    @keyframes revealIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      box-shadow: var(--shadow-md);
+      padding: 0.75rem 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--neutral-dark);
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cta-button:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .nav-container {
+        padding: 1rem;
+      }
+
+      .cta-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: 80px;
+      height: 600px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDY5Mjg2fDB8MXxzZWFyY2h8MXx8TWVjaGFuaWN8ZW58MXwwfHx8MTc4OTU4ODU5OXww&ixlib=rb-4.1.0&q=80&w=1080') center/cover no-repeat;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 76, 58, 0.65);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 700px;
+      padding: 2rem;
+      animation: heroEnter 0.9s ease-out;
+    }
+
+    @keyframes heroEnter {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: var(--neutral-light);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 500px;
+        margin-top: 70px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn-primary, .btn-secondary {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--neutral-gray);
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.75rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .service-card p {
+      color: var(--neutral-gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Why Choose Us */
+    .why-choose {
+      background: var(--neutral-light);
+      border-radius: 12px;
+      padding: 3rem;
+      margin: 3rem 0;
+    }
+
+    .why-choose h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .why-item::before {
+      content: '✓';
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .why-item p {
+      color: var(--neutral-dark);
+      font-size: 0.95rem;
+    }
+
+    /* Service Area & Map */
+    .service-area {
+      margin: 3rem 0;
+    }
+
+    .service-area h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .service-area-text {
+      color: var(--neutral-gray);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .service-hours {
+      background: var(--neutral-light);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-hours h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .hour-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .hour-item:last-child {
+      border-bottom: none;
+    }
+
+    .hour-day {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .hour-time {
+      color: var(--neutral-gray);
+    }
+
+    /* Reviews & Social Proof */
+    .reviews-section {
+      margin: 3rem 0;
+    }
+
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      background: var(--neutral-light);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .rating-large {
+      text-align: center;
+    }
+
+    .rating-number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: 'Syne', sans-serif;
+    }
+
+    .rating-stars {
+      color: var(--accent);
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    .rating-count {
+      color: var(--neutral-gray);
+      font-size: 0.95rem;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 1rem;
+    }
+
+    .review-author {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .review-stars {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    .review-text {
+      color: var(--neutral-dark);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .review-date {
+      color: var(--neutral-gray);
+      font-size: 0.8rem;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin: 3rem 0;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      background: var(--white);
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--primary);
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--neutral-light);
+    }
+
+    .faq-toggle {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1.5rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 1.5rem;
+    }
+
+    .faq-answer p {
+      color: var(--neutral-dark);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 3rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .contact-section h2 {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .contact-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .contact-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      background: var(--accent);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact-link:hover {
+      background: var(--accent-light);
+      transform: translateY(-4px);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--neutral-dark);
+      color: var(--white);
+      padding: 3rem 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .why-choose {
+        padding: 2rem;
+      }
+
+      .rating-summary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .map-container {
+        height: 350px;
+      }
+
+      .contact-section {
+        padding: 2rem;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Utility */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AquaMan Mobile Mechanic Car Service",
+    "image": "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDY5Mjg2fDB8MXxzZWFyY2h8MXx8TWVjaGFuaWN8ZW58MXwwfHx8MTc4OTU4ODU5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "description": "Professional mobile mechanic service in Houston, TX. We bring expert auto repair directly to your location with on-site diagnostics, brake service, engine work, and car programming.",
+    "telephone": "(832) 774-7884",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14938 Atmore Pl Dr",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77082",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.727958599999997,
+      "longitude": -95.6510127
+    },
+    "areaServed": "Houston, Texas",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "493"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Monday",
+        "opens": "08:00",
+        "closes": "01:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Tuesday",
+        "opens": "08:00",
+        "closes": "01:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Wednesday",
+        "opens": "08:00",
+        "closes": "01:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "opens": "08:00",
+        "closes": "01:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "08:00",
+        "closes": "23:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "13:30",
+        "closes": "23:00"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer mobile mechanic service to my location in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, AquaMan Mobile Mechanic brings professional auto repair directly to your home or office throughout Houston, TX. We specialize in on-site diagnostics and repairs, eliminating the need for towing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of repairs do you perform?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We handle a wide range of services including engine diagnostics, brake service and replacement, spark plugs and coils, radiator and alternator repair, transmission fluid service, car programming, and general maintenance. We use quality parts and follow proper procedures for every job."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can you come out for a repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We pride ourselves on fast turnaround times. Many customers report same-day service or next-day appointments depending on availability. Call (832) 774-7884 to schedule your service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your hours of operation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We operate Monday through Thursday 8 AM–1 AM, Friday 8 AM–11:30 PM, Saturday 8 AM–10 PM, and Sunday 1:30 PM–11 PM. Extended hours ensure we can fit your schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, AquaMan Mobile Mechanic is fully licensed, insured, and professional. Our 4.9-star rating from 493 verified customer reviews reflects our commitment to quality and reliability."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+          <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M20 8 L28 20 L24 20 L24 28 L16 28 L16 20 L12 20 Z" fill="currentColor"/>
+          <circle cx="12" cy="32" r="2" fill="currentColor"/>
+          <circle cx="28" cy="32" r="2" fill="currentColor"/>
+        </svg>
+        <span>AquaMan</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-choose">Why Us</a></li>
+          <li><a href="#service-area">Service Area</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="tel:(832) 774-7884" class="cta-button">Call Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Professional Mobile Mechanic Service in Houston</h1>
+      <p>Expert auto repair brought directly to your driveway. Fast diagnostics, quality parts, and honest service you can trust.</p>
+      <div class="hero-cta">
+        <a href="tel:(832) 774-7884" class="btn-primary">Call (832) 774-7884</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Services Section -->
+    <section id="services" class="reveal">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Comprehensive auto repair and maintenance performed at your location with professional expertise and quality parts.</p>
+      
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">⚙️</div>
+          <h3>Engine Diagnostics</h3>
+          <p>Advanced computer diagnostics to identify engine issues quickly and accurately, saving you time and money.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🛑</div>
+          <h3>Brake Service</h3>
+          <p>Complete brake system service including pad and rotor replacement, fluid checks, and safety inspections.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔧</div>
+          <h3>Engine Maintenance</h3>
+          <p>Spark plugs, coils, radiator service, alternator repair, and fluid top-offs to keep your engine running smoothly.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">💻</div>
+          <h3>Car Programming</h3>
+          <p>Professional vehicle programming and electronic systems diagnostics for modern automobiles.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🚗</div>
+          <h3>Transmission Service</h3>
+          <p>Transmission fluid service, level checks, and CVT fluid temperature monitoring for optimal performance.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔍</div>
+          <h3>General Maintenance</h3>
+          <p>Routine maintenance, fluid checks, and preventative care to extend your vehicle's lifespan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose" class="reveal">
+      <div class="why-choose">
+        <h2>Why Choose AquaMan Mobile Mechanic?</h2>
+        <div class="why-list">
+          <div class="why-item reveal">
+            <p><strong>On-Site Service:</strong> We come to you—no towing, no dealership hassles, no waiting in a shop.</p>
+          </div>
+          <div class="why-item reveal">
+            <p><strong>Fast Turnaround:</strong> Many repairs completed in under an hour, often same-day service available.</p>
+          </div>
+          <div class="why-item reveal">
+            <p><strong>Expert Diagnostics:</strong> Professional computer diagnostics and hands-on expertise for accurate repairs.</p>
+          </div>
+          <div class="why-item reveal">
+            <p><strong>Quality Parts:</strong> We source affordable, quality replacement parts and follow proper procedures.</p>
+          </div>
+          <div class="why-item reveal">
+            <p><strong>Honest Service:</strong> Transparent pricing, no hidden fees, and professional recommendations you can trust.</p>
+          </div>
+          <div class="why-item reveal">
+            <p><strong>4.9★ Rated:</strong> 493 verified customer reviews reflecting our commitment to excellence and reliability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area & Map -->
+    <section id="service-area" class="reveal">
+      <h2 class="section-title">Service Area</h2>
+      <p class="service-area-text">AquaMan Mobile Mechanic proudly serves Houston, Texas and surrounding areas. We bring professional auto repair directly to your home or office, eliminating the need for dealership visits or towing fees.</p>
+      
+      <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=29.727958599999997,-95.6510127&z=14&output=embed" title="AquaMan Mobile Mechanic Service Area Map" loading="lazy"></iframe>
+      </div>
+
+      <div class="service-hours reveal">
+        <h3>Hours of Operation</h3>
+        <div class="hours-grid">
+          <div class="hour-item">
+            <span class="hour-day">Monday</span>
+            <span class="hour-time">8 AM–1 AM</span>
+          </div>
+          <div class="hour-item">
+            <span class="hour-day">Tuesday</span>
+            <span class="hour-time">8 AM–1 AM</span>
+          </div>
+          <div class="hour-item">
+            <span class="hour-day">Wednesday</span>
+            <span class="hour-time">8 AM–1 AM</span>
+          </div>
+          <div class="hour-item">
+            <span class="hour-day">Thursday</span>
+            <span class="hour-time">8 AM–1 AM</span>
+          </div>
+          <div class="hour-item">
+            <span class="hour-day">Friday</span>
+            <span class="hour-time">8 AM–11:30 PM</span>
+          </div>
+          <div class="hour-item">
+            <span class="hour-day">Saturday</span>
+            <span class="hour-time">8 AM–10 PM</span>
+          </div>
+          <div class="hour-item">
+            <span class="hour-day">Sunday</span>
+            <span class="hour-time">1:30 PM–11 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews & Social Proof -->
+    <section id="reviews" class="reviews-section reveal">
+      <h2 class="section-title">Customer Reviews</h2>
+      
+      <div class="rating-summary reveal">
+        <div class="rating-large">
+          <div class="rating-number">4.9</div>
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-count">Based on 493 reviews</div>
+        </div>
+        <div>
+          <p style="font-size: 1.1rem; color: var(--neutral-dark); line-height: 1.8;">Our customers consistently praise our fast turnaround, professional expertise, honest service, and convenient on-site repairs. We take pride in every job and stand behind our work.</p>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-header">
+            <span class="review-author">Asif Balouch</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-text">Had an unexpected breakdown and found out it's a busted radiator and alternator. Frank got me a tow for cheap, got the parts swapped them and topped off all my fluids and cleaned up everything under the hood so it looks like new. It was a big job and he fixed it fast. Very impressive turnaround time. He's very knowledgeable and kind and right around the corner where I live! Will definitely keep him.</p>
+          <span class="review-date">August 5, 2026</span>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-header">
+            <span class="review-author">Alan R</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-text">Thank you sir 🙏 by far the quickest and very professional person. Really quick diagnosed my vehicle. He gave me a solution and help me solve the problem effortlessly. I will definitely be calling him again for any of my other cars.</p>
+          <span class="review-date">April 23, 2026</span>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-header">
+            <span class="review-author">Andrea D</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-text">I had a great experience with Aquaman Mobile Car Service. I used the mobile mechanic service to change my two front rotors and all four brake pads, and the job came out excellent. The service was professional, he showed up and delivered the service smoothly, and completed the work efficiently. What really stood out was his honesty and helpfulness, he provided recommendations for affordable parts.</p>
+          <span class="review-date">July 14, 2026</span>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-header">
+            <span class="review-author">Aaron Kidd - AK Studios</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-text">Best experience I could have hoped for. He came same day. Changed everything in my drive way. 4 spark plugs and coils. Everything done in an hour. Super nice. Thank you</p>
+          <span class="review-date">September 2, 2026</span>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-header">
+            <span class="review-author">Michael Tran</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-text">I had a great experience. He came out quickly and was professional from start to finish — even working in the rain without any complaints. I had accidentally overfilled my engine oil and also drained some transmission fluid by mistake. He corrected both issues properly, used the correct fluids, and followed the proper procedure. He monitored the CVT fluid temperature during the level check and made sure everything was right.</p>
+          <span class="review-date">February 14, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section reveal">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer mobile mechanic service to my location in Houston?
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, AquaMan Mobile Mechanic brings professional auto repair directly to your home or office throughout Houston, TX. We specialize in on-site diagnostics and repairs, eliminating the need for towing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What types of repairs do you perform?
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>We handle a wide range of services including engine diagnostics, brake service and replacement, spark plugs and coils, radiator and alternator repair, transmission fluid service, car programming, and general maintenance. We use quality parts and follow proper procedures for every job.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How quickly can you come out for a repair?
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>We pride ourselves on fast turnaround times. Many customers report same-day service or next-day appointments depending on availability. Call (832) 774-7884 to schedule your service.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What are your hours of operation?
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>We operate Monday through Thursday 8 AM–1 AM, Friday 8 AM–11:30 PM, Saturday 8 AM–10 PM, and Sunday 1:30 PM–11 PM. Extended hours ensure we can fit your schedule.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Are you licensed and insured?
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, AquaMan Mobile Mechanic is fully licensed, insured, and professional. Our 4.9-star rating from 493 verified customer reviews reflects our commitment to quality and reliability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section reveal">
+      <h2>Ready to Get Your Car Fixed?</h2>
+      <p>Contact AquaMan Mobile Mechanic today for fast, professional service at your location in Houston.</p>
+      <div class="contact-cta">
+        <a href="tel:(832) 774-7884" class="contact-link">Call (832) 774-7884</a>
+        <a href="https://maps.google.com/maps?q=29.727958599999997,-95.6510127" target="_blank" rel="noopener noreferrer" class="contact-link">Get Directions</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#why-choose">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="tel:(832) 774-7884">Call Us</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 AquaMan Mobile Mechanic Car Service. All rights reserved. | Professional Auto Repair in Houston, TX</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll reveal animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(element => {
+      observer.observe(element);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+
+    // Animated counter for rating (if visible)
+    function animateCounter(element, target, duration = 1000) {
+      let current = 0;
+      const increment = target / (duration / 16);
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target.toFixed(1);
+          clearInterval(timer);
+        } else {
+          element.textContent = current.toFixed(1);
+        }
+      }, 16);
+    }
+
+    // Trigger counter animation when rating section is visible
+    const ratingObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const ratingNumber = entry.target.querySelector('.rating-number');
+          if (ratingNumber && ratingNumber.textContent === '4.9') {
+            animateCounter(ratingNumber, 4.9);
+            ratingObserver.unobserve(entry.target);
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const ratingSummary = document.querySelector('.rating-summary');
+    if (ratingSummary) {
+      ratingObserver.observe(ratingSummary);
+    }
+
+    // Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      document.documentElement.style.scrollBehavior = 'auto';
+      document.querySelectorAll('[style*="animation"]').forEach(el => {
+        el.style.animation = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
